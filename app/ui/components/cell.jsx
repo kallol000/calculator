@@ -1,7 +1,7 @@
-
-export default function Cell({color}){
+import styles from "../css/component.module.css"
+export default function Cell({color, classname}){
     return(
-        <div style={{backgroundColor: color, width: "200px", height: "200px"}}>
+        <div className={`${styles.cell} ${styles[classname]}`} style={{backgroundColor: color}}>
 
         </div>
     )

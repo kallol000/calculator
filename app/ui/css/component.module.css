@@ -1,0 +1,93 @@
+.bucket{
+    width: 150px;
+    height: 250px;
+    border: 1px solid rgb(79, 79, 79);
+    border-top: none;
+    border-radius: 0px 0px 5px 5px;
+    margin-left: 300px;
+    position: relative;
+
+}
+
+.cell{
+    opacity: 0;
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: rgb(143, 143, 143);
+    position: absolute;
+    bottom: -2px;
+    left: 10px;
+    margin: 10px 0px;
+}
+
+.cell-1{
+    animation: stack3 4s 4s infinite backwards ;
+}
+.cell-2{
+    animation: stack2 2s 2s 1 forwards ;
+}
+.cell-3{
+    animation: stack1 2s 1 forwards ;
+}
+
+@keyframes stack1{
+    0%{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    25%{
+        transform: translate(-150px, -250px);
+    }
+    50%{
+        transform: translate(0, -250px);
+    }
+    
+    100%{
+        opacity: 1; 
+        position: absolute;       
+    }
+} 
+
+@keyframes stack2{
+    0%{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    25%{
+        transform: translate(-150px, -210px);
+    }
+    50%{
+        transform: translate(0, -200px);
+        bottom: 50px;       
+    }
+    
+    100%{
+        opacity: 1; 
+        bottom: 50px;       
+    }
+} 
+@keyframes stack3{
+    0%{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    12.5%{
+        transform: translate(-150px, -210px);
+    }
+    25%{
+        transform: translate(0, -200px);
+        bottom: 50px;       
+    }
+    
+    50%{
+        opacity: 1; 
+        bottom: 50px;       
+    }
+    62.5%{
+        transform: translate(0, -200px);
+    }
+    100%{
+        transform: translate(150px, -210px);
+    }
+} 
